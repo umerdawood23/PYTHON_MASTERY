@@ -12,7 +12,6 @@ spark = SparkSession.builder \
 df = spark.read.csv("s3://quant-data-bucket/xauusd_tick_history_5years.csv")
 
 # 3. 'Advanced Algorithms': High-performance distributed processing
-mean_price = df.groupby("date").avg("price")
-mean_price.show()
+
 
 # 4. 'Answers and Results': Shared instantly with your global team
