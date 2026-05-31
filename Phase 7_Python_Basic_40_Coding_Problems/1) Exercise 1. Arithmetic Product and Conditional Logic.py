@@ -1,23 +1,19 @@
-#Practice Problem: Write a Python function that accepts two integer numbers. If the product of the two numbers is less than or equal to 1000, return their product; otherwise, return their sum.
+"""Practice Problem: Write a Python function that accepts two integer numbers. 
+If the product of the two numbers is less than or equal to 1000, return their product; 
+otherwise, return their sum."""
 
-item = "Laptop"
-price = 1250
-quantity = 2
-total = price * quantity
+# Wrap the input() in int() to convert the string to an integer
+Number_One = int(input("Enter the first Number: "))
+Number_Two = int(input("Enter the second Number: "))
 
-print("You bought {} {}s for a total of ${}.".format(quantity, item, total))
+def product_sum(Number_One, Number_Two):
+    product = Number_One * Number_Two
 
-
-first_name = "umer" #(Keep it lowercase)
-last_name = "dawood" #(Keep it lowercase)
-year = 2026
-
-print("Welcome, {} {}! Your generated email is umer.dawood2026@company.com".format(first_name.title(), last_name.title(), year))
-
-player1 = "Alice"
-score1 = 95
-player2 = "Bob"
-score2 = 100
-
-print("PLAYER: {} | SCORE: {}".format(player1, score1))
-print("PLAYER: {} | SCORE: {}".format(player2, score2))
+    if product <= 1000:
+        return product
+    else:
+        return Number_One + Number_Two
+         
+# Call the function once and print it
+result = product_sum(Number_One, Number_Two)
+print("The result is", result)
