@@ -19,3 +19,10 @@ print(txt)
 
 Text = "I am Umer\nDawood."
 print(Text)
+
+"""Return Value"""
+txt = "Hello\rWorld!"
+print(txt) 
+
+Text = f"This is Will Only Return the value\r{20+12}."
+print(Text)
