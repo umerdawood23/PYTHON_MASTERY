@@ -11,3 +11,11 @@ print(txt)
 """\\	Backslash"""
 txt = "This will insert one \\ (backslash)."
 print(txt) 
+
+
+"""New Line"""
+txt = "Hello\nWorld!"
+print(txt) 
+
+Text = "I am Umer\nDawood."
+print(Text)
