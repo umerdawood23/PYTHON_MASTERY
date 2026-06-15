@@ -26,3 +26,12 @@ print(txt)
 
 Text = f"This is Will Only Return the value\r{20+12}."
 print(Text)
+
+
+"""Returning the Tab"""
+txt = "Hello\tWorld!"
+print(txt) 
+
+Age = 24
+value = f"This will give a Tab, such as Umer\tDawood. I am {Age}."
+print(value)
