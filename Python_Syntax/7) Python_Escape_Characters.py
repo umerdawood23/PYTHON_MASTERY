@@ -7,3 +7,7 @@ print(Text)
 """\'	Single Quote"""
 txt = 'It\'s alright.'
 print(txt) 
+
+"""\\	Backslash"""
+txt = "This will insert one \\ (backslash)."
+print(txt) 
