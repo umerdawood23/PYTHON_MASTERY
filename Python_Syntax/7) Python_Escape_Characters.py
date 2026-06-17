@@ -51,3 +51,10 @@ print(txt)
 
 Text = "\000\111\224\223"
 print(Text)
+
+#A backslash followed by an 'x' and a hex number represents a hex value:
+txt = "\x48\x65\x6c\x6c\x6f"
+print(txt) 
+
+Text = "\x20\x10\x23"
+print(Text)
