@@ -18,3 +18,11 @@ number_two = int(input("Enter the second number: "))
 # Call the function and print the result
 result = calculate_product_or_sum(number_one, number_two)
 print(f"The result is: {result}")
+
+
+"""Enter Multiple Values"""
+"""You can add multiple inputs in one line in python with the help of Slipt Function"""
+
+name, age, profession = ("Enter your name, age, profession, separated by spaces.").split()
+print("\n")
+print("User Details as as follows:" name, age, profession)
