@@ -26,3 +26,4 @@ print(f"The result is: {result}")
 name, age, profession = ("Enter your name, age, profession, separated by spaces.").split()
 print("\n")
 print("User Details as as follows:" name, age, profession)
+
