@@ -21,7 +21,7 @@ print(f"The result is: {result}")
 
 
 """Enter Multiple Values"""
-"""You can add multiple inputs in one line in python with the help of Slipt Function"""
+
 
 name, age, profession = ("Enter your name, age, profession, separated by spaces.").split()
 print("\n")
