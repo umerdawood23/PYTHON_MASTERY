@@ -21,3 +21,17 @@ Print the sorted list."""
 names = ["Zack", "alice", "Bob", "charlie"]
 names.sort(key = str.lower)
 print(names)
+
+"""Question 3: Custom Sort Function
+You want to sort a list of numbers based on how close they are to the number 10.
+Given the list numbers = [2, 15, 8, 22, 11], write a custom function to calculate the difference from 10, 
+and use it as the key to sort the list. Print the sorted list."""
+
+
+def myfunc(n):
+    return abs(n - 10)
+
+list = [2, 15, 8, 22, 11]
+list.sort(key = myfunc)
+print(list)
+
