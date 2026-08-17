@@ -35,3 +35,10 @@ list = [2, 15, 8, 22, 11]
 list.sort(key = myfunc)
 print(list)
 
+"""Question 4: Pure Reversal
+You have a list representing a user's browsing history: history = ["home", "about", "contact", "success"]. 
+Write the code to reverse the exact order of this list (most recent first) without sorting it alphabetically. Print the reversed list."""
+
+history = ["home", "about", "contact", "success"]
+history.sort(reverse = False)
+print(history)
