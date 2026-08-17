@@ -5,3 +5,8 @@ write the code to sort the list numerically from highest to lowest, and then pri
 thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
 thislist.sort()
 print(thislist)
+
+
+list_score = [45, 92, 12, 78, 55]
+list_score.sort(reverse=True)
+print(list_score)
