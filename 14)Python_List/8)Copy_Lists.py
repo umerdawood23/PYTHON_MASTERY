@@ -25,3 +25,7 @@ list3 = list1 + list2
 print(list3)
 
 
+for x in list2:
+    list3.append(x)
+print(list3)
+
