@@ -15,3 +15,11 @@ print(fruit)
 Student = ["Umer", "Ali", "Usman"]
 Student.clear()
 print(Student)
+
+
+"""Copy Method"""
+fruits = ['apple', 'banana', 'cherry', 'orange']
+x = fruits.copy()
+
+Num = ["1", "2", "3", "4"]
+y = Num.copy()
