@@ -23,3 +23,12 @@ x = fruits.copy()
 
 Num = ["1", "2", "3", "4"]
 y = Num.copy()
+
+
+"""Count() Method"""
+Number = [1,2,3,4,5,5,5]
+a = Number.count(5)
+print(a)
+
+"""Explanation: The count Method returns the specified value from the list
+Syntax: list.count(value). The value can be anything ranging from int, float, string, tuple, list etc"""
