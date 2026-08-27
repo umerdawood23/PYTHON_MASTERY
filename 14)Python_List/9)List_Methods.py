@@ -32,3 +32,11 @@ print(a)
 
 """Explanation: The count Method returns the specified value from the list
 Syntax: list.count(value). The value can be anything ranging from int, float, string, tuple, list etc"""
+
+"""Extend Method()"""
+"""Explanation: The Extend Method adds the specified list of elements (or any iterable) at the end of the list"""
+
+Number1 = [1,2,3,4,5]
+Number2 = [6,7,8,9,10]
+Number2.extend(Number1)
+print(Number2)
