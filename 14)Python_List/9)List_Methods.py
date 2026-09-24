@@ -52,3 +52,8 @@ print(Number2)
 Insert_Method = ["SPY", "APPL", "TSLA"]
 Insert_Method.insert(0, "XAUUSD")
 print(Insert_Method)
+
+
+"""Pop()_Method"""
+Insert_Method.pop(0)
+print(Insert_Method)
