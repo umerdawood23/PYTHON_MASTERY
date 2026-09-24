@@ -42,5 +42,8 @@ Number2.extend(Number1)
 print(Number2)
 
 
+"""Index() Method"""
 
-""""""
+"""The Index Method returns the Index of the element in  the List"""
+Index = Student.index("Umer")
+print(Index)
