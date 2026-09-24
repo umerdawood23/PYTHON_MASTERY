@@ -44,6 +44,11 @@ print(Number2)
 
 """Index() Method"""
 
-"""The Index Method returns the Index of the element in  the List"""
-Index = Student.index("Umer")
-print(Index)
+"""The Index Method returns the Index of the element in the List"""
+# Example:
+# Index = Student.index("Umer")
+
+"""Insert Method"""
+Insert_Method = ["SPY", "APPL", "TSLA"]
+Insert_Method.insert(0, "XAUUSD")
+print(Insert_Method)
