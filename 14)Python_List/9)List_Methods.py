@@ -57,3 +57,8 @@ print(Insert_Method)
 """Pop()_Method"""
 Insert_Method.pop(0)
 print(Insert_Method)
+
+"""REMOVE()_METHOD"""
+REMOVE_METHOD = ["Lora", "MALL", "BC"]
+REMOVE_METHOD.remove("BC")
+print(REMOVE_METHOD)
