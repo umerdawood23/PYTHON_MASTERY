@@ -62,3 +62,45 @@ print(Insert_Method)
 REMOVE_METHOD = ["Lora", "MALL", "BC"]
 REMOVE_METHOD.remove("BC")
 print(REMOVE_METHOD)
+
+"""SORTING_METHOD"""
+# Defining Function
+def myFunc(e):
+	return e.lower()
+
+SORTING_CARS = ["honda", "tesla", "BMW", "volvo"]
+SORTING_CARS.sort(reverse = True, key = myFunc)
+
+print(SORTING_CARS)
+
+
+def myFunc(l):
+	return l['year']
+
+SORTING_CARS1 = [
+	{'car' : 'Honda' , 'year' : '2000'},
+	{'car' : 'Toyota', 'year' : '2005'},
+	{'car' : 'City', 'year' : '2010'}
+]
+
+SORTING_CARS1.sort(reverse = False, key = myFunc)
+print(SORTING_CARS1)
+
+"""Creating a List"""
+colors = ["red", "green", "blue"]
+
+
+"""Print the first item"""
+print(colors[0])
+
+"""Change the second itemn to Yellow"""
+colors[1] = "yellow"
+
+"""Adding the Purple"""
+colors.append("Purple")
+
+"""Remove the Red Color"""
+colors.remove("red")
+
+"""Print the List"""
+print(colors)
