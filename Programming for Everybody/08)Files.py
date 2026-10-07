@@ -14,5 +14,18 @@
 """handle = open(filename, mode)
 handle = open('mbox.txt', 'r')"""
 fand = open('"C:\Users\RBTG V2\Documents\Data For Trading\Min_Data\2026.7.3AUDCAD_dukascopy_M1_UTC-M1-No Session.csv"', 'r')
-for lora in fand:
-    print(lora)
+fand = fand.read()
+count = 0
+
+
+filename = input("Enter the file name:")
+try:
+    filename = open(filename)
+except:
+    print("File cannot be opened: ", filename)
+    quit()
+count = 0
+for line in filename:
+    if line.startswith('Suhbjet:') :
+        count = count + 1
+print('There were', count, 'subject lines in', filename)
