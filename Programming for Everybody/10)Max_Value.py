@@ -1,6 +1,6 @@
 """Total and average value"""
 
-count = 0
+"""count = 0
 total = 0.0
 
 while True:
@@ -16,4 +16,24 @@ while True:
     total = total + float_value
 
 average = total / count
-print(average)    
+print(average) """
+
+numlist = list()
+
+while True:
+    try:
+        inp = input("Enter the numbers: ")
+        if inp == 'done': break
+    except ZeroDivisionError:
+        print("Cannot be divided by zero")
+        
+    except ValueError:
+        print("Incorrect value")
+        continue
+
+    
+    value = float(inp)
+    numlist = numlist.append(value)
+
+average = (sum(numlist)) / (len(numlist))
+print("The average of the numbers are: ", average)
