@@ -1,24 +1,28 @@
-file_name = input("Enter the file name: ")
+file_name = input("Enter the file name:")
+file_handle = open(file_name, 'r') # assigning handle and opening up the file
 
 count = 0
 total = 0.0
-maximum = None
+Max = 0 
 
-with open(file_name, "r") as file_handle:
-    for line in file_handle:
-        if not line.startswith("X-DSPAM-Probability:"):
-            continue
+for line in file_handle:
+    if not line.startswith("X-DSPAM-Probability:"):
+        continue
 
-        value = float(line.split(":", 1)[1].strip())
-        count += 1
-        total += value
+    #Finding the colon position
+    colon_pos = line.find(":")
 
-        if maximum is None or value > maximum:
-            maximum = value
+    #Extracting the values
+    value = float(file_handle[colon_pos+1:].strip())
 
-if count == 0:
-    print("No X-DSPAM-Probability values found.")
-else:
-    print(f"Maximum probability: {maximum:.4f}")
-    print(f"Average probability: {total / count:.4f}")
+    #Counting all the values
+    count = count + 1
+
+    #finding the total
+    total = total + value
+
+
+
+
+
 
