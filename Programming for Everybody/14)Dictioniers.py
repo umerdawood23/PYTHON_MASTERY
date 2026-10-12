@@ -24,3 +24,16 @@ dict_2 = {}
 print(dict_2)
 dict_1['Name'] = 'Dawood'
 print(dict_1)
+
+dict_3 = dict()
+names = ['Umer', 'Ali', 'Bakar', 'Umer', 'Umer']
+for name in names:
+    if name not in dict_3:
+        dict_3[name] = 1
+    else:
+        dict_3[name] = dict_3[name] + 1
+print(dict_3)
+
+X = dict_3.get('Umer', 0)
+print(X)
+
