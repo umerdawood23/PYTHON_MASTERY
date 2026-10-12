@@ -16,3 +16,11 @@ rhisdictionary = {
 }
 
 print(rhisdictionary)
+
+dict_1 = {'Name':'Umer', 'Age': 24, 'Gender':'Male'}
+print(dict_1)
+
+dict_2 = {}
+print(dict_2)
+dict_1['Name'] = 'Dawood'
+print(dict_1)
