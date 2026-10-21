@@ -12,3 +12,6 @@ print(POUND_USD)
 
 (GOLD, POUND_USD, *EURO_JPY) = Symbol
 print(*EURO_JPY) 
+
+(GOLD, *POUND_USD) = Symbol
+print(*POUND_USD)
