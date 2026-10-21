@@ -19,3 +19,6 @@ print(thistuple[:5])
 
 #If starting value is left out, then it will go to the end.
 print(thistuple[2:])
+
+#Negative Indexing, Specifying the value
+print(thistuple[-5:-1])
