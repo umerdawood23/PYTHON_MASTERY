@@ -1,4 +1,4 @@
-thistuple = ("apple", "banana", "cherry", "apple", "cherry")
+thistuple = ("GBPJPY", "EURJPY", "EURUSD", "GBPUSD", "XAUUSD")
 print(thistuple)
 print(len(thistuple))
 
@@ -11,3 +11,6 @@ print(thistuple[0:3])
 #Negative Indexing
 #Negative Indexing refers to the indexing of the Tuple by accessing them by there Index
 print(thistuple[-1])
+
+#Range of Indexes
+print(thistuple[0:4])
