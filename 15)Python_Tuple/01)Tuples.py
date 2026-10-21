@@ -14,3 +14,5 @@ print(thistuple[-1])
 
 #Range of Indexes
 print(thistuple[0:4])
+# If first Item not specified then it starts from 0 and goes to the specified item 
+print(thistuple[:5])
