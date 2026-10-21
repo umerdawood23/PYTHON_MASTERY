@@ -22,3 +22,7 @@ print(thistuple[2:])
 
 #Negative Indexing, Specifying the value
 print(thistuple[-5:-1])
+
+if "XAUUSD" in thistuple:
+    print("Yes, XAUUSD is present.")
+    
