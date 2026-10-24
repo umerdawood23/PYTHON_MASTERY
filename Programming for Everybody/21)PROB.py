@@ -1,29 +1,28 @@
-#Importing the Libraries that are neeeded 
-import urllib.request 
+import urllib.request, urllib.parse
 import json, ssl
 
-# Saving the service URL into a variable
+# API endpoint provided by the assignment
 serviceurl = 'https://py4e-data.dr-chuck.net/opengeo?'
 
-#SSL Certificate Errors
+# Ignore SSL certificate errors
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
 while True:
-    address = input("Enter the adress:")
-    if (len(address)) < 1: break
+    address = input('Enter location: ')
+    if len(address) < 1: break
 
     address = address.strip()
-    dict_1 = dict()
-    dict_1['A'] = address
+    parms = dict()
+    parms['q'] = address
 
-    url = serviceurl + urllib.parse.urlencode(dict_1)
+    url = serviceurl + urllib.parse.urlencode(parms)
 
-    print("Retreiving: ", url)
-    uh = urllib.request.urlopen(url)
+    print('Retrieving', url)
+    uh = urllib.request.urlopen(url, context=ctx)
     data = uh.read().decode()
-    print('Reterived:', len(data), 'characters')
+    print('Retrieved', len(data), 'characters')
 
     try:
         js = json.loads(data)
@@ -31,14 +30,15 @@ while True:
         js = None
 
     if not js or 'features' not in js:
-        print("===Donload Error===")
-        print(data)
-        break
-    if len(js['features']) == 0: 
-        print("NO values found")
+        print('==== Download error ====')
         print(data)
         break
 
-plus_code = js['features'][0]['properties']['plus_code']
-print('plus code', plus_code)
+    if len(js['features']) == 0:
+        print('==== Object not found ====')
+        print(data)
+        break
 
+    # Extract the plus_code from the nested JSON structure
+    plus_code = js['features'][0]['properties']['plus_code']
+    print('Plus code', plus_code)
