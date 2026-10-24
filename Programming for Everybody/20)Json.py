@@ -1,39 +1,28 @@
-import json 
+import urllib.request
+import json
+import ssl
 
-people_string = '''
-{
-  "people": [
-    {
-      "name": "John Smith",
-      "phone": "615-555-7164",
-      "emails": ["johnsmith@bogusemail.com", "john.smith@work-place.com"],
-      "has_license": false
-    },
-    {
-      "name": "Jane Doe",
-      "phone": "560-555-5153",
-      "emails": null,
-      "has_license": true
-    }
-  ]
-}
-'''
+# Ignore SSL certificate errors
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
 
-"""data = json.loads(people_string)
+url = input("Enter the URL: ")
 
+print("Retreiving:", url)
+uh = urllib.request.urlopen(url, context=ctx)
+data = uh.read()
+print("Reterived:", len(data), 'characters')
 
-for person in data['people']:
-    del person['phone']
+# Parse the JSON data (decode bytes to string first)
+info = json.loads(data.decode())
 
-new_string  = json.dumps(data, indent=2, sort_keys=True)
-print(new_string)"""
-sum = 0  # For Storing the Sum
-count = 0 # The Counter for the Numbers
+# Navigate the JSON structure
+counts = info['comments']
+print('Count:', len(counts))
 
-with open('json.json') as f:
-    data = json.load(f)
+total = 0
+for item in counts:
+    total = total + int(item['count'])
 
-for stat in data["comments"]:
-    print(stat['name'])
-    print(stat['count'])
-     
+print('Sum:', total)
