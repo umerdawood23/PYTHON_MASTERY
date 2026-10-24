@@ -1,0 +1,8 @@
+{
+  "store": "SuperMart",
+  "items": [
+    {"id": 101, "name": "Laptop", "price": 1200, "in_stock": true},
+    {"id": 102, "name": "Mouse", "price": 25, "in_stock": true},
+    {"id": 103, "name": "Keyboard", "price": 75, "in_stock": false}
+  ]
+}
