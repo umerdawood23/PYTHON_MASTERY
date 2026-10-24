@@ -19,11 +19,21 @@ people_string = '''
 }
 '''
 
-data = json.loads(people_string)
+"""data = json.loads(people_string)
 
 
 for person in data['people']:
-    print("Name:" , person['name'])
-    print("Phone:" , person['phone'])
-    print("Emails:" , person['emails'])
-    print("Has_license:" , person['has_license'])
+    del person['phone']
+
+new_string  = json.dumps(data, indent=2, sort_keys=True)
+print(new_string)"""
+sum = 0  # For Storing the Sum
+count = 0 # The Counter for the Numbers
+
+with open('json.json') as f:
+    data = json.load(f)
+
+for stat in data["comments"]:
+    print(stat['name'])
+    print(stat['count'])
+     
