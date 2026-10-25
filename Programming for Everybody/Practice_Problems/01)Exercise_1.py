@@ -12,7 +12,7 @@ employees_json = '''
 '''
 
 
-data = json.loads(employees_json)
+data = json.loads(employees_json) # Returns the Data type List. Converts the String Dictionary into Python List Data Type
 for num in data["employees"]:
     if num["has_license"]:  
         print(num['name'])

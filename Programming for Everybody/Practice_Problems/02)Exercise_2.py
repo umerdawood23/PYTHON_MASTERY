@@ -8,5 +8,5 @@ except FileNotFoundError:
 data = json.loads(File)
 for num in data['items']:
     del num['in_stock']
-
-new_file = json.dump(updated_inventory)
+new_file = updated_inventory
+new_file = json.dump(new_file)

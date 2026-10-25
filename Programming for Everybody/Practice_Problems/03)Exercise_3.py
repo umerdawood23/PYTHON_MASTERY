@@ -16,8 +16,7 @@ while True:
     break
 
     for num in data:
-        if int(num["id"]) <=10:
-            print(num["userId"])
-            print(num["id"])
-            print(num["title"])
-            print(num["body"])
+        print(num["userId"])
+        print(num["id"])
+        print(num["title"])
+        print(num["body"])
