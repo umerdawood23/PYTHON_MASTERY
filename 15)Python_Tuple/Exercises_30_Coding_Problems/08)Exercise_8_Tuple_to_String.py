@@ -10,3 +10,4 @@ Expected Output: abc"""
 chars = ('a', 'b', 'c')
 result = "".join(chars)
 print(result)
+
