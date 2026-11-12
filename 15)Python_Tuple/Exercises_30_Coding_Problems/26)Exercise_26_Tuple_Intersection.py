@@ -10,9 +10,6 @@ Expected Output: Common elements: (4, 5, 6)
 t1 = (1, 2, 3, 4, 5, 6) 
 t2 = (4, 5, 6, 7, 8, 9)
 
-common = tuple(sorted(set(t1)&(t2)))
-print("Common elements:", common)
-
 
 common_ordered = tuple(x for x in t1 if x in t2)
 print("Common elements (ordered):", common_ordered)
