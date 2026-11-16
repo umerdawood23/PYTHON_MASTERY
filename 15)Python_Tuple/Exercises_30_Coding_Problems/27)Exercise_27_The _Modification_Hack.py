@@ -4,3 +4,10 @@ Purpose: This exercise highlights the immutability of tuples and demonstrates th
 Understanding this pattern also helps you appreciate why tuples are immutable by design and when to choose a list instead.
 Given Input: colours = ("red", "green", "blue"), replace "green" with "yellow".
 """
+
+colours = ("red", "green", "blue")
+list_1 = list(colours)
+list_1[1] = "yellow"
+list_1 = tuple(colours)
+print(list_1)
+print(type(list_1))
