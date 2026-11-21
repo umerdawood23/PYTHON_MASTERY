@@ -13,3 +13,5 @@ list_1 = list(range(1_000_000))
 tuple_1 = tuple(range(1_000_000))
 print(f'The Size of List is:', sys.getsizeof(list_1))
 print(f'The Size of tuple is:', sys.getsizeof(tuple_1))
+
+print(f'The List of command line arguments passed toscript:', sys.argv(list_1))
