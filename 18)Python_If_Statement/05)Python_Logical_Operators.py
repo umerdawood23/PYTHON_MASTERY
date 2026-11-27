@@ -18,3 +18,12 @@ c = 2222
 
 if a > b and c > a:
     print("Both conditions are true!")
+
+
+"""The OR operator is a logical Operator and is used to combine conditional statements. Atleast 1 Condition must be true for the entire expression to be True
+"""
+
+#Test if a is greater than b, OR if a is greater than c:
+
+if a > b or a > c:
+    print("1 Condition is True that is a>b!")
